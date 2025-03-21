@@ -1,9 +1,10 @@
-# 🚀 Component-js
+# 🚀 React TextFormField Component
 
-````md
-# React + Vite + Tailwind + pnpm
+## 📝 Descripción
 
-Este proyecto utiliza **React con Vite** para un desarrollo rápido y eficiente, junto con **Tailwind CSS** para los estilos y **pnpm** como gestor de paquetes.
+Este es un componente de entrada de texto inspirado en el **TextFormField de Flutter**, diseñado para ser reutilizable en proyectos de **React con Tailwind CSS**.
+
+Incluye compatibilidad con iconos a la izquierda y derecha, cambios de color en `focus`, soporte para deshabilitar el campo y personalización de estilos con `clsx` y `tailwind-merge`.
 
 ## 🚀 Requisitos previos
 
@@ -15,7 +16,6 @@ Antes de comenzar, asegúrate de tener instalados:
   ```sh
   npm install -g pnpm
   ```
-````
 
 ## 📦 Instalación
 
@@ -29,10 +29,24 @@ pnpm install
 
 ## 🎨 Configuración de Tailwind CSS
 
-El proyecto usa **Tailwind CSS**. Si aún no está configurado, instálalo con:
+Si Tailwind no está configurado, instálalo con:
 
 ```sh
-pnpm install tailwindcss @tailwindcss/vite
+pnpm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Asegúrate de que el archivo `tailwind.config.js` contenga:
+
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
 ```
 
 Y en `index.css`, importa Tailwind:
@@ -45,12 +59,10 @@ Y en `index.css`, importa Tailwind:
 
 ## 🔌 Instalación de dependencias adicionales
 
-Este proyecto usa `clsx` y `tailwind-merge` para mejorar la gestión de clases en Tailwind, además de `lucide-react` para iconos:
+Este proyecto usa `clsx` y `tailwind-merge` para gestionar clases dinámicamente y `lucide-react` para iconos:
 
 ```sh
-pnpm install tailwind-merge
-pnpm install clsx
-pnpm add lucide-react
+pnpm install clsx tailwind-merge lucide-react
 ```
 
 ## 🚀 Levantar el proyecto
@@ -97,4 +109,25 @@ Para formatearlo con Prettier (si está configurado):
 pnpm format
 ```
 
+## 🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! Si deseas mejorar este componente o agregar nuevas funcionalidades:
+
+1. Haz un **fork** del repositorio.
+2. Crea una nueva rama con tu mejora:
+   ```sh
+   git checkout -b feature/nueva-funcionalidad
+   ```
+3. Realiza tus cambios y confirma los commits:
+   ```sh
+   git commit -m "Agrega nueva funcionalidad"
+   ```
+4. Sube los cambios a tu repositorio:
+   ```sh
+   git push origin feature/nueva-funcionalidad
+   ```
+5. Abre un **Pull Request** en este repositorio.
+
 ---
+
+🚀 **¡Gracias por usar este componente!** Si tienes alguna sugerencia, no dudes en abrir un **issue**.
