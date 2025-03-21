@@ -1,32 +1,36 @@
 {
   "name": "component-js",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "Un componente reutilizable de TextFormField para React inspirado en Flutter.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "src"],
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "prepublishOnly": "pnpm build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JorgeAntonio/component-js.git"
+  },
+  "keywords": ["react", "component", "textformfield", "tailwind", "flutter"],
+  "author": "Jorge Antonio",
+  "license": "MIT",
   "dependencies": {
-    "@tailwindcss/vite": "^4.0.15",
     "clsx": "^2.1.1",
+    "tailwind-merge": "^3.0.2",
     "lucide-react": "^0.483.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "tailwind-merge": "^3.0.2",
-    "tailwindcss": "^4.0.15"
+    "react-dom": "^19.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "devDependencies": {
-    "@eslint/js": "^9.21.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react-swc": "^3.8.0",
-    "eslint": "^9.21.0",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^15.15.0",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "tailwindcss": "^4.0.15",
+    "@vitejs/plugin-react-swc": "^3.8.0"
   }
 }
