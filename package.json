@@ -1,5 +1,5 @@
 {
-  "name": "component-js",
+  "name": "@jorgeantonio/component-js",
   "version": "1.0.0",
   "description": "Un componente reutilizable de TextFormField para React inspirado en Flutter.",
   "main": "dist/index.js",
