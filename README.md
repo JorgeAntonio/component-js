@@ -32,21 +32,7 @@ pnpm install
 Si Tailwind no está configurado, instálalo con:
 
 ```sh
-pnpm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-Asegúrate de que el archivo `tailwind.config.js` contenga:
-
-```js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+pnpm install tailwindcss @tailwindcss/vite
 ```
 
 Y en `index.css`, importa Tailwind:
@@ -62,7 +48,9 @@ Y en `index.css`, importa Tailwind:
 Este proyecto usa `clsx` y `tailwind-merge` para gestionar clases dinámicamente y `lucide-react` para iconos:
 
 ```sh
-pnpm install clsx tailwind-merge lucide-react
+pnpm install tailwind-merge
+pnpm install clsx
+pnpm add lucide-react
 ```
 
 ## 🚀 Levantar el proyecto
