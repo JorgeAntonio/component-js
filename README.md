@@ -1,12 +1,100 @@
-# React + Vite
+# 🚀 Component-js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+````md
+# React + Vite + Tailwind + pnpm
 
-Currently, two official plugins are available:
+Este proyecto utiliza **React con Vite** para un desarrollo rápido y eficiente, junto con **Tailwind CSS** para los estilos y **pnpm** como gestor de paquetes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Requisitos previos
 
-## Expanding the ESLint configuration
+Antes de comenzar, asegúrate de tener instalados:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Node.js** (versión recomendada: 18 o superior) 👉 [Descargar Node.js](https://nodejs.org/)
+- **pnpm** (si no lo tienes, instálalo con el siguiente comando)
+
+  ```sh
+  npm install -g pnpm
+  ```
+````
+
+## 📦 Instalación
+
+Clona el repositorio y luego instala las dependencias:
+
+```sh
+git clone https://github.com/JorgeAntonio/component-js.git
+cd component-js
+pnpm install
+```
+
+## 🎨 Configuración de Tailwind CSS
+
+El proyecto usa **Tailwind CSS**. Si aún no está configurado, instálalo con:
+
+```sh
+pnpm install tailwindcss @tailwindcss/vite
+```
+
+Y en `index.css`, importa Tailwind:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+## 🔌 Instalación de dependencias adicionales
+
+Este proyecto usa `clsx` y `tailwind-merge` para mejorar la gestión de clases en Tailwind, además de `lucide-react` para iconos:
+
+```sh
+pnpm install tailwind-merge
+pnpm install clsx
+pnpm add lucide-react
+```
+
+## 🚀 Levantar el proyecto
+
+Para iniciar el servidor de desarrollo, usa:
+
+```sh
+pnpm dev
+```
+
+El proyecto se ejecutará en [`http://localhost:5173`](http://localhost:5173) por defecto.
+
+## ⚡ Construcción para producción
+
+Si deseas generar los archivos optimizados para producción:
+
+```sh
+pnpm build
+```
+
+Los archivos generados se almacenarán en la carpeta `dist/`.
+
+## 🧪 Ejecutar el servidor de producción
+
+Después de construir el proyecto, puedes previsualizarlo con:
+
+```sh
+pnpm preview
+```
+
+Esto simula cómo se serviría en un entorno real.
+
+## 🛠️ Linting y formateo
+
+Para verificar el código con ESLint:
+
+```sh
+pnpm lint
+```
+
+Para formatearlo con Prettier (si está configurado):
+
+```sh
+pnpm format
+```
+
+---
