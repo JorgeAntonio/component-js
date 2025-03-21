@@ -1,12 +1,3 @@
-// import { defineConfig } from 'vite'
-// import tailwindcss from '@tailwindcss/vite'
-// import react from '@vitejs/plugin-react-swc'
-
-// // https://vite.dev/config/
-// export default defineConfig({
-//   plugins: [react(), tailwindcss()],
-// })
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -21,7 +12,8 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.js"),
       name: "ComponentJS",
-      fileName: (format) => `index.${format}.js`
+      formats: ["es", "cjs"],
+      fileName: "index"
     },
     rollupOptions: {
       external: ["react", "react-dom"],
@@ -34,4 +26,3 @@ export default defineConfig({
     }
   }
 });
-
