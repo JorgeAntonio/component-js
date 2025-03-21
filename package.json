@@ -1,13 +1,14 @@
 {
   "name": "@jorgeantonio/component-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Un componente reutilizable de TextFormField para React inspirado en Flutter.",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "style": "dist/index.css", 
   "files": ["dist", "src"],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && npx tailwindcss -i ./src/index.css -o ./dist/index.css --minify",
     "prepublishOnly": "pnpm build"
   },
   "repository": {
